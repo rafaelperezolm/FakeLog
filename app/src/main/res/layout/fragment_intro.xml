@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_purple"
+    tools:context=".presentation.intro.IntroFragment">
+
+    <ImageView
+        android:id="@+id/intro_image_view_background"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:contentDescription="@string/intro_background_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im_background_intro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/intro_view_filter"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:background="@drawable/sh_shadow_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/intro_constraint_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/intro_image_view_logo"
+            android:layout_width="@dimen/intro_logo_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2x"
+            android:layout_marginTop="@dimen/space_2x"
+            android:contentDescription="@string/intro_logo_description"
+            android:src="@drawable/ic_logo_baubap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/intro_text_view_subtitle"
+            style="@style/TextStyleSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_4x"
+            android:text="@string/intro_subtitle_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/intro_button_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/intro_button_primary"
+            style="@style/BigButtonPrimary"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_marginStart="@dimen/space_2x"
+            android:layout_marginEnd="@dimen/space_2x"
+            android:layout_marginBottom="@dimen/space_2x"
+            android:text="@string/intro_button_primary_text"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/intro_button_secondary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/intro_button_secondary"
+            style="@style/BigButtonSecondary"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/big_button_height"
+            android:layout_marginStart="@dimen/space_2x"
+            android:layout_marginEnd="@dimen/space_2x"
+            android:layout_marginBottom="@dimen/space_4x"
+            android:text="@string/intro_button_secondary_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

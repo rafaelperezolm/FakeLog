@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_purple"
+    tools:context=".presentation.sign.SignFragment">
+
+    <ImageView
+        android:id="@+id/login_image_view_background"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/login_background_height"
+        android:contentDescription="@string/login_background_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/im_background_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/login_view_filter"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="@dimen/match_constraint"
+        android:background="@drawable/sh_shadow_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_constraint_layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/login_image_view_logo"
+            android:layout_width="@dimen/intro_logo_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_2x"
+            android:layout_marginTop="@dimen/space_2x"
+            android:contentDescription="@string/intro_logo_description"
+            android:src="@drawable/ic_logo_baubap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/login_text_view_subtitle"
+            style="@style/TextStyleSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_2x"
+            android:text="@string/login_subtitle_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/login_guideline_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/login_guideline_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/login_guideline_begin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/match_constraint"
+            android:background="@drawable/sh_background_card"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_guideline_background" >
+
+            <TextView
+                android:id="@+id/login_text_view_title"
+                style="@style/TextStyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3x"
+                android:text="@string/login_title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/login_text_view_curp_hint"
+                style="@style/TextStyleBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_3x"
+                android:text="@string/login_curp_hint_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_text_view_title" />
+
+            <FrameLayout
+                android:id="@+id/login_frame_layout_curp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_1x"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:background="@drawable/sh_background_edit_text"
+                android:padding="@dimen/space_h1x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_text_view_curp_hint">
+
+                <EditText
+                    android:id="@+id/login_edit_text_curp"
+                    style="@style/EditTextStyleCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName|textCapCharacters"
+                    android:maxLength="18"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,LabelFor" />
+
+                <Button
+                    android:id="@+id/login_button_curp_clear"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="@dimen/space_1x"
+                    android:layout_marginEnd="@dimen/space_1x"
+                    android:background="@drawable/ic_cancel"
+                    android:contentDescription="@string/login_clear_curp_description"
+                    android:visibility="invisible"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/login_text_view_nip_hint"
+                style="@style/TextStyleBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_2x"
+                android:text="@string/login_nip_hint_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_frame_layout_curp" />
+
+            <FrameLayout
+                android:id="@+id/login_frame_layout_nip"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_1x"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:background="@drawable/sh_background_edit_text"
+                android:padding="@dimen/space_h1x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_text_view_nip_hint" >
+
+                <EditText
+                    android:id="@+id/login_edit_text_nip"
+                    style="@style/EditTextStyleCustom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,LabelFor" />
+
+                <Button
+                    android:id="@+id/login_button_nip_clear"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginStart="@dimen/space_1x"
+                    android:layout_marginEnd="@dimen/space_1x"
+                    android:background="@drawable/ic_cancel"
+                    android:contentDescription="@string/login_clear_nip_description"
+                    android:visibility="invisible"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/intro_linear_layout_nip_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_3x"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login_frame_layout_nip">
+
+                <TextView
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_nip_help_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/login_frame_layout_curp" />
+
+                <Space
+                    android:layout_width="@dimen/space_h1x"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/login_text_view_nip_link"
+                    style="@style/TextStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_nip_help_link"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_button_primary"
+                style="@style/BigButtonPrimary"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="@dimen/big_button_height"
+                android:layout_marginStart="@dimen/space_2x"
+                android:layout_marginTop="@dimen/space_4x"
+                android:layout_marginEnd="@dimen/space_2x"
+                android:text="@string/login_button_secondary_text"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/intro_linear_layout_nip_help"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

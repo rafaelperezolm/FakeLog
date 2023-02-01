@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.login.LoginFragment">
+
+    <ImageView
+        android:id="@+id/sign_image_view_logo"
+        android:layout_width="@dimen/login_logo_width"
+        android:layout_height="@dimen/login_logo_width"
+        android:contentDescription="@string/sign_logo_description"
+        android:layout_marginBottom="@dimen/space_4x"
+        android:src="@drawable/ic_under_construction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sign_text_view_subtitle"
+        style="@style/TextStyleSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_3x"
+        android:text="@string/sign_subtitle_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_image_view_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

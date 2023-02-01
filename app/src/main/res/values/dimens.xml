@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="space_h1x">4dp</dimen>
+    <dimen name="space_1x">8dp</dimen>
+    <dimen name="space_2x">16dp</dimen>
+    <dimen name="space_3x">24dp</dimen>
+    <dimen name="space_4x">32dp</dimen>
+    <dimen name="big_button_height">40dp</dimen>
+    <dimen name="edit_text_height">40dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+    <!-- Intro -->
+    <dimen name="intro_logo_width">160dp</dimen>
+    <!-- Login -->
+    <dimen name="login_logo_width">120dp</dimen>
+    <dimen name="login_logo_height">120dp</dimen>
+    <dimen name="login_background_height">280dp</dimen>
+    <dimen name="login_guideline_begin">256dp</dimen>
+</resources>

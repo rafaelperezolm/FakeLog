@@ -1,3 +1,39 @@
 <resources>
+    <!-- App -->
     <string name="app_name">FakeLog</string>
+    <!-- Intro -->
+    <string name="intro_background_description">Background</string>
+    <string name="intro_logo_description">Logo</string>
+    <string name="intro_title_text">Baubap</string>
+    <string name="intro_subtitle_text">¡Bienvenido a Baubap!</string>
+    <string name="intro_button_primary_text">Crear una cuenta</string>
+    <string name="intro_button_secondary_text">Iniciar sesión</string>
+    <!-- Sign -->
+    <string name="sign_logo_description">Logo</string>
+    <string name="sign_title_text">Crear una cuenta</string>
+    <string name="sign_subtitle_text">Under Construction</string>
+    <!-- Login -->
+    <string name="login_background_description">Background</string>
+    <string name="login_logo_description">Logo</string>
+    <string name="login_clear_curp_description">Clear CURP</string>
+    <string name="login_clear_nip_description">Clear NIP</string>
+    <string name="login_curp_description">CURP</string>
+    <string name="login_title_text">Inicia sesión</string>
+    <string name="login_subtitle_text">¡Hola de nuevo!</string>
+    <string name="login_curp_hint_text">Ingresa tu CURP o número celular</string>
+    <string name="login_nip_hint_text">Ingresa tu NIP de acceso</string>
+    <string name="login_button_secondary_text">Iniciar sesión</string>
+    <string name="login_nip_help_text">¿Olvidaste tu NIP?</string>
+    <string name="login_nip_help_link"><a href="">Recupéralo aquí</a></string>
+    <string name="login_nip_help_title">Recupera tu NIP</string>
+    <string name="login_nip_help_message">Tus claves de acceso son:\n\nadmin\n123</string>
+    <string name="login_success_title">Éxito</string>
+    <string name="login_success_message">Has iniciado sesión correctamente</string>
+    <string name="login_error_title">Error</string>
+    <!-- Curp errors -->
+    <string name="curp_error_empty">Se requiere CURP</string>
+    <string name="curp_error_lenght">CURP debe tener 18 caracteres</string>
+    <!-- Nip errors -->
+    <string name="nip_error_empty">Se requiere NIP</string>
+    <string name="nip_error_lenght">NIP debe tener 4 caracteres</string>
 </resources>
